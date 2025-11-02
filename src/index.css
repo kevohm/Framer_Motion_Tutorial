@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base{
+    
+    .square{
+        @apply bg-white rounded-lg border border-black mb-1 p-3 px-4 w-16 h-16 font-semibold text-2xl
+    }
+    .board-row{
+        @apply gap-1 flex
+
+    }
+    .status{
+        @apply text-white font-semibold text-4xl text-center mb-4
+    }
+    .game{
+        background-image: url("./assets/bg1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @apply flex flex-col gap-6 justify-center items-center w-full h-full 
+    }
+    .game-board{
+        @apply  max-w-sm w-full flex flex-col items-center
+    }
+    .game-info{
+        @apply max-w-sm  w-full h-48 flex flex-col items-center overflow-y-scroll
+    }
+    .game-info ol{
+         @apply max-w-48 w-full flex flex-col gap-2.5
+    }
+     .game-info li {
+        @apply w-full
+     }
+      .game-info li button {
+        @apply w-full h-full px-3 py-2 rounded-xl bg-white/50  backdrop-blur-lg  text-black hover:bg-white/70 text-sm font-medium
+      }
+      .current-move{
+        @apply bg-white  backdrop-blur-lg
+      }
+}
+body{
+    @apply w-screen h-screen flex items-center justify-center
+}
+
+#root{
+    @apply w-full h-full
+}
